@@ -14,6 +14,14 @@ export const Container = styled.div`
     width: 56%;
     justify-content: space-between;
   }
+  .mdc-text-field:active {
+    color: orange;
+  }
+  .mdc-text-field--focused:active {
+  }
+  .mdc-text-field--focused:focus {
+    border-color: #ff8822;
+  }
   .content-enter-login {
     display: flex;
     height: 120px;
@@ -22,6 +30,7 @@ export const Container = styled.div`
     flex-direction: column;
   }
   .content-enter-login a {
+    text-decoration: none;
     position: absolute;
     top: 466px;
     bottom: 213px;

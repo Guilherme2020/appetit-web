@@ -4,7 +4,7 @@ import { Container } from "./styles";
 import Form from "../../components/Form";
 import logo from "../../assets/logo.svg";
 
-export default function Login() {
+export default function Login(props) {
   return (
     <Container>
       <div className="content">
@@ -31,7 +31,7 @@ export default function Login() {
             </p>
           </div>
         </div>
-        <Form />
+        <Form props={props} />
       </div>
     </Container>
   );
