@@ -31,7 +31,7 @@ export default function Home() {
             <p>13/05/2019, você vendeu R$ 45,80</p>
             <div className="card">
               <div className="user">
-                <img src={user} alt="" />
+                <img src={user} alt="user avatar" />
               </div>
             </div>
           </div>
