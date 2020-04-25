@@ -12,7 +12,7 @@ export default function Sidebar() {
             <img src={logo} alt="logo" />
           </div>
 
-          <div className={"orders"}>
+          <div className={"orders-aside"}>
             <img alt="icon" src={iconOrder} />
             <p>pedidos</p>
           </div>

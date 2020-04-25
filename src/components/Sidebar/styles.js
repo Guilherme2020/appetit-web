@@ -22,7 +22,7 @@ export const Content = styled.section`
     justify-content: center;
   }
 
-  .orders {
+  .orders-aside {
     background: #ffffff;
     position: absolute;
     width: 342px;
