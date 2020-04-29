@@ -11,6 +11,10 @@ export const Aside = styled.aside`
 
   background: #ff8822;
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+
+  @media only screen and (min-width: 320px) and (max-width: 620px) {
+    display: none;
+  }
 `;
 
 export const Content = styled.section`

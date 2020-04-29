@@ -1,20 +1,22 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 75%;
+  background: #fafafa;
+  width: 100%;
   align-items: center;
   justify-content: center;
   display: flex;
   height: auto;
   flex-direction: column;
+
   .orders {
-    width: 95%;
+    margin-top: 8%;
+    width: 901px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-left: 20%;
-    padding-left: 68%;
   }
   .orders a {
     text-decoration: none;
@@ -36,7 +38,8 @@ export const Container = styled.div`
   .content-user {
     display: flex;
     flex-direction: column;
-    width: 32%;
+    width: 50%;
+
     align-items: center;
     justify-content: center;
     padding-left: 4%;
@@ -65,7 +68,8 @@ export const Container = styled.div`
 
   .make-order {
     position: absolute;
-    width: 901px;
+    width: 839px;
+
     height: 56px;
     left: 369px;
     top: 142px;
@@ -78,7 +82,7 @@ export const Container = styled.div`
     }
     div {
       display: flex;
-      width: 19%;
+      width: 21%;
       align-items: center;
       justify-content: center;
       margin-left: -5%;
@@ -186,5 +190,29 @@ export const Container = styled.div`
     line-height: 18px;
     /* identical to box height, or 150% */
     color: rgba(0, 0, 0, 0.54);
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 620px) {
+    .content-user {
+      width: 85%;
+    }
+    .make-order {
+      display: flex;
+      align-items: center;
+      position: inherit;
+      width: 82%;
+
+      div {
+        margin-left: 0;
+        width: auto;
+      }
+    }
+    .orders {
+      width: 316px;
+      padding-left: 0;
+    }
+    .card .user {
+      width: 26%;
+    }
   }
 `;

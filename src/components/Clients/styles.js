@@ -3,12 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 88%;
   margin-top: 3%;
-  .content-itens {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-  }
+
   .divisor-content {
     width: 100%;
     background: #979797;
@@ -16,13 +11,19 @@ export const Container = styled.div`
     display: flex;
     height: 1px;
   }
+  .content-itens {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
   .content-itens .iten-name {
     font-family: "Open Sans";
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    width: 69%;
+    width: 86%;
 
     /* identical to box height, or 150% */
 

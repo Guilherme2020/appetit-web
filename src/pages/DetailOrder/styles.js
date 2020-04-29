@@ -14,12 +14,13 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-left: 20%;
+    padding-left: 25%;
   }
   .content-user {
     display: flex;
     flex-direction: column;
-    width: 52%;
+    width: 47%;
+
     align-items: center;
     justify-content: center;
     padding-left: 4%;
@@ -61,7 +62,7 @@ export const Container = styled.div`
     border-radius: 5px;
   }
   .card .user {
-    width: 14%;
+    width: 11%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,7 +81,7 @@ export const Container = styled.div`
   .info-user {
     display: flex;
     justify-content: space-between;
-    margin-top: 9px;
+    /* margin-top: 9px; */
     height: 40px;
   }
   .info-user .user-name {
@@ -112,5 +113,27 @@ export const Container = styled.div`
     line-height: 18px;
     /* identical to box height, or 150% */
     color: rgba(0, 0, 0, 0.54);
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 620px) {
+    .orders {
+      width: 79%;
+      padding-left: 0;
+    }
+    .content-user {
+      width: 84%;
+    }
+    .card {
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+    }
+    .card .user {
+      width: 25%;
+    }
+    .content-card {
+      width: 76%;
+      height: auto;
+    }
   }
 `;

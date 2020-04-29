@@ -71,7 +71,7 @@ export default function Home() {
               </div>
             </div>
           </Link>
-          <Link to="detail-user">
+          <Link to="detail-order">
             <div className="card">
               <div className="user">
                 <img src={user} alt="user avatar" />
