@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Aside from "../../components/Sidebar";
 import Orders from "../../components/Orders";
+import Header from "../../components/Header";
 import api from "../../services/orders/api";
 import { Link } from "react-router-dom";
 import more from "../../assets/more.svg";
+import avatartNav from "../../assets/avatar-navbar.svg";
 import { Container } from "./styles";
 import { AiOutlineSearch } from "react-icons/ai";
+
 export default function Home() {
   const [search, setSearch] = useState("");
   const [sales, setSales] = useState([]);
@@ -14,23 +17,24 @@ export default function Home() {
     try {
       let response = await api.fetchData();
       setOrders(response);
-      let sales = [];
-      if (orders.length > 0) {
-        for (let i = 0; i < orders.length; i++) {
-          sales = orders[i].sale;
-        }
-        console.log(sales);
-        setSales(sales);
-      }
     } catch (e) {
       console.log(e);
     }
   };
+  // let sales = [];
+  // if (orders.length > 0) {
+  //   for (let i = 0; i < orders.length; i++) {
+  //     sales = orders[i].sale;
+  //   }
+  //   console.log(sales);
+  //   setSales(sales);
+  // }
   useEffect(() => {
     onFetchData();
-  }, [onFetchData]);
+  }, []);
 
   const salesData = () => {};
+
   const renderOrders = () => {
     return orders.map((item) => <Orders key={item.id} item={item} />);
   };
@@ -40,15 +44,17 @@ export default function Home() {
 
     let _orders = orders;
 
+    //orders [{ id, vale, ]]
+
     console.log(sales);
-    const newData = sales.filter((item) => {
-      const itemData = `${item.name.toUpperCase()} ${item.name.toUpperCase()} ${item.name.toUpperCase()}`;
+    const newData = orders.filter((item) => {
+      const itemData = `${item.dateSale.toUpperCase()} ${item.dateSale.toUpperCase()} ${item.dateSale.toUpperCase()}`;
       const textData = text.toUpperCase();
 
       return itemData.indexOf(textData) > -1;
     });
     console.log(newData);
-    // setOrders(newData);
+    setOrders(newData);
     if (text.length === 0) {
       setOrders(_orders);
     }
@@ -58,6 +64,12 @@ export default function Home() {
     <>
       <Container>
         <Aside />
+        {/* <Header /> */}
+        <div className="container-header">
+          <div>
+            <img src={avatartNav} alt="" />
+          </div>
+        </div>
         <section>
           <div className="content-user">
             <p>Olá, Vanusa!</p>

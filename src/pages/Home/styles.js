@@ -8,7 +8,20 @@ export const Container = styled.div`
   display: flex;
   height: auto;
   flex-direction: column;
+  .container-header {
+    display: flex;
+    width: 100%;
+    height: 41px;
 
+    div {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      height: 45px;
+      padding-right: 3%;
+      padding-top: 2%;
+    }
+  }
   .content-user {
     display: flex;
     flex-direction: column;
@@ -169,6 +182,14 @@ export const Container = styled.div`
     color: #ff8822;
   }
   @media only screen and (min-width: 320px) and (max-width: 620px) {
+    .container-header {
+      height: 0;
+
+      div {
+        padding-right: 4%;
+        padding-top: 5%;
+      }
+    }
     .content-user {
       width: 85%;
       padding-left: 0;
@@ -178,7 +199,7 @@ export const Container = styled.div`
     }
     .divisor {
       margin-left: 2px;
-      width: 24%;
+      width: 57%;
     }
     .container-input {
       width: 100%;
