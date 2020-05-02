@@ -4,6 +4,7 @@ import { Container } from "./styles";
 import Aside from "../../components/Sidebar";
 import Header from "../../components/Header";
 import Clients from "../../components/Clients";
+import back from "../../assets/back.png";
 import { Link } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
 import { Line } from "rc-progress";

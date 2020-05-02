@@ -9,41 +9,15 @@ export const Container = styled.div`
   height: auto;
   flex-direction: column;
 
-  .orders {
-    margin-top: 8%;
-    width: 901px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-left: 20%;
-  }
-  .orders a {
-    text-decoration: none;
-    display: flex;
-    /* position: absolute; */
-    /* left: 372px; */
-    /* width: 100%; */
-    /* right: 1.93%; */
-    /* top: 38.54%; */
-    bottom: 48.83%;
-    height: 71px;
-    width: 100%;
-    /* margin-top: 2%; */
-    margin-bottom: 18px;
-    background: #ffffff;
-    box-shadow: 0px 0.5px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-  }
   .content-user {
     display: flex;
     flex-direction: column;
     width: 50%;
-
+    margin-top: 4%;
     align-items: center;
     justify-content: center;
-    padding-left: 4%;
-    margin-top: 4%;
+    display: flex;
+    padding-left: 20%;
     hr {
       background: #ff8822;
       width: 154px;
@@ -67,22 +41,24 @@ export const Container = styled.div`
   }
 
   .make-order {
-    position: absolute;
-    width: 839px;
+    width: 99%;
 
     height: 56px;
-    left: 369px;
-    top: 142px;
     background: #ffffff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    padding-left: 4%;
+    padding-left: 1%;
+    margin-left: 20%;
+    align-items: center;
+    justify-content: center;
+
     a {
+      width: 100%;
       text-decoration: none;
     }
     div {
       display: flex;
-      width: 21%;
+      width: 32%;
       align-items: center;
       justify-content: center;
       margin-left: -5%;
@@ -111,100 +87,32 @@ export const Container = styled.div`
     /* width: 32%;
     padding-left: 5%; */
   }
-  .card {
-    /* display: flex;
-    position: absolute;
-    left: 372px;
-    width: 70%;
-    right: 1.93%;
-    top: 38.54%;
-    margin-top: 2%;
-    bottom: 48.83%;
-    height: 90px;
-    background: #ffffff;
-    box-shadow: 0px 0.5px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px; */
-    display: flex;
-    /* position: absolute; */
-    /* left: 372px; */
-    /* width: 100%; */
-    /* right: 1.93%; */
-    /* top: 38.54%; */
-    bottom: 48.83%;
-    height: 71px;
-    width: 100%;
-    /* margin-top: 2%; */
-    margin-bottom: 18px;
-    background: #ffffff;
-    box-shadow: 0px 0.5px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-  }
-  .card .user {
-    width: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .user img {
-    vertical-align: middle;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-top: 6px;
-  }
-  .content-card {
-    width: 100%;
-    height: auto;
-  }
-  .info-user {
-    display: flex;
-    justify-content: space-between;
-    height: 40px;
-  }
-  .info-user .user-name {
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-    /* identical to box height, or 150% */
-    color: rgba(0, 0, 0, 0.87);
-  }
-  .info-user .price-order {
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-    /* identical to box height, or 150% */
-    text-align: right;
-    color: rgba(0, 0, 0, 0.87);
-    margin-right: 8px;
-  }
-  .info-order {
-    /* Caption */
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 18px;
-    /* identical to box height, or 150% */
-    color: rgba(0, 0, 0, 0.54);
-  }
 
   @media only screen and (min-width: 320px) and (max-width: 620px) {
     .content-user {
       width: 85%;
+      padding-left: 0;
+      p {
+        width: 100%;
+      }
     }
     .make-order {
       display: flex;
       align-items: center;
       position: inherit;
-      width: 82%;
-
+      width: 100%;
+      margin-left: 0;
+      a {
+        width: 100%;
+        display: flex;
+        margin-left: 10px;
+      }
       div {
         margin-left: 0;
-        width: auto;
+        width: 100%;
+      }
+      p {
+        font-size: 12px;
       }
     }
     .orders {
