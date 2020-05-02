@@ -5,25 +5,53 @@ import api from "../../services/orders/api";
 import { Link } from "react-router-dom";
 import more from "../../assets/more.svg";
 import { Container } from "./styles";
-
+import { AiOutlineSearch } from "react-icons/ai";
 export default function Home() {
   const [search, setSearch] = useState("");
+  const [sales, setSales] = useState([]);
   const [orders, setOrders] = useState([]);
-
-  useEffect(() => {
-    onFetchData();
-  }, []);
   const onFetchData = async () => {
     try {
       let response = await api.fetchData();
       setOrders(response);
+      let sales = [];
+      if (orders.length > 0) {
+        for (let i = 0; i < orders.length; i++) {
+          sales = orders[i].sale;
+        }
+        console.log(sales);
+        setSales(sales);
+      }
     } catch (e) {
       console.log(e);
     }
   };
+  useEffect(() => {
+    onFetchData();
+  }, [onFetchData]);
 
+  const salesData = () => {};
   const renderOrders = () => {
     return orders.map((item) => <Orders key={item.id} item={item} />);
+  };
+
+  const searchFilterFunction = (text) => {
+    setSearch(text);
+
+    let _orders = orders;
+
+    console.log(sales);
+    const newData = sales.filter((item) => {
+      const itemData = `${item.name.toUpperCase()} ${item.name.toUpperCase()} ${item.name.toUpperCase()}`;
+      const textData = text.toUpperCase();
+
+      return itemData.indexOf(textData) > -1;
+    });
+    console.log(newData);
+    // setOrders(newData);
+    if (text.length === 0) {
+      setOrders(_orders);
+    }
   };
 
   return (
@@ -34,7 +62,7 @@ export default function Home() {
           <div className="content-user">
             <p>Olá, Vanusa!</p>
           </div>
-
+          <div className="divisor" />
           <div className="make-order">
             <Link to="/select-product">
               <div>
@@ -44,6 +72,24 @@ export default function Home() {
             </Link>
 
             <div />
+          </div>
+          <div className="container-input">
+            <AiOutlineSearch
+              style={{ marginTop: "2%" }}
+              color="#ff8822"
+              size={23}
+            />
+
+            <div className="label-float">
+              <input
+                type="text"
+                onChange={(e) => searchFilterFunction(e.target.value)}
+                value={search}
+                placeholder=" "
+              />
+
+              <label>Procure o pedido aqui...</label>
+            </div>
           </div>
           {renderOrders()}
         </section>

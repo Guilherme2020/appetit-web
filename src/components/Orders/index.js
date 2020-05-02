@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { OrdersContainer } from "./styles";
-import user1 from "../../assets/avatar-order/user1.svg";
+import FormatNumber from "../../utils/FormatNumber";
 export default function Orders({ item }) {
   console.log(item);
   return (
@@ -26,7 +26,7 @@ export default function Orders({ item }) {
               fontSize: 16,
             }}
           >
-            {item.valueSale}
+            {FormatNumber(item.valueSale)}
           </span>
         </p>
       </div>
@@ -39,7 +39,7 @@ export default function Orders({ item }) {
             <div className="content-card">
               <div className="info-user">
                 <p className="user-name">{i.name}</p>
-                <p className="price-order">{i.value}</p>
+                <p className="price-order">{FormatNumber(i.value)}</p>
               </div>
               <div>
                 <p style={{ lineHeight: 0 }} className="info-order">

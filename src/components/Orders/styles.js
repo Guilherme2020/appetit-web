@@ -16,6 +16,23 @@ export const OrdersContainer = styled.div`
     .card .user {
       width: 26%;
     }
+    .info-order {
+      /* margin-top: -8px; */
+      line-height: 9px;
+    }
+    .info-user {
+      height: 35px;
+    }
+    .orders {
+      width: 316px;
+      padding-left: 0;
+    }
+    .info-order {
+      line-height: 10px;
+    }
+    .card .user {
+      width: 26%;
+    }
   }
 
   a {
