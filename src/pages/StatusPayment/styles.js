@@ -321,8 +321,13 @@ export const Container = styled.div`
     div {
       display: flex;
       justify-content: space-between;
-      width: 17%;
+      width: 29%;
+
       align-items: center;
+
+      label {
+        font-family: "Open Sans";
+      }
     }
   }
   .add-cart {

@@ -102,6 +102,34 @@ export default function StatusPayment() {
               Qual o status de pagamento?
             </p>
           </div>
+          <div className="content-options">
+            <div>
+              <input
+                type="radio"
+                id="male"
+                name="name"
+                // onChange={(e) => setOption(e.target.value)}
+                value={false}
+              />
+              <label>Não esta pago</label>
+            </div>
+
+            <div style={{}}></div>
+          </div>
+          <div className="content-options">
+            <div>
+              <input
+                type="radio"
+                id="male"
+                name="name"
+                // onChange={(e) => setOption(e.target.value)}
+                value={false}
+              />
+              <label>Já está pago</label>
+            </div>
+
+            <div style={{}}></div>
+          </div>
         </div>
       </div>
     </Container>
