@@ -31,7 +31,13 @@ export default function Orders({ item }) {
         </p>
       </div>
       {item.sale.map((i) => (
-        <Link key={i.id} to="detail-order">
+        <Link
+          key={i.id}
+          to={{
+            pathname: `/detail-order/${encodeURIComponent(i.name)}`,
+            state: { someData: { name: i.name, date: i.date } },
+          }}
+        >
           <div className="card">
             <div className="user">
               <img src={i.avatar} alt="user avatar" />

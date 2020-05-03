@@ -13,7 +13,7 @@ export default function Routes() {
       <Switch>
         <Route path="/" exact component={Login} />
         <Route path="/home" exact component={Home} />
-        <Route path="/detail-order" exact component={DetailOrder} />
+        <Route path="/detail-order/:order" exact component={DetailOrder} />
         <Route path="/select-product" exact component={SelectProduct} />
         <Route path="/select-clients" exact component={SelectClients} />
         <Route path="/status" exact component={StatusPayment} />

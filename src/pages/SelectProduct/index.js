@@ -198,7 +198,7 @@ export default function SelectProduct() {
               <img src={ilustration} alt="Ilustration" />
             </div>
           </div>
-          <div className="content-description-order" style={{ height: 772 }}>
+          <div className="content-description-order" style={{ height: 868 }}>
             <Header />
             <div className="content-text-description">
               <div onClick={() => setShowDetail(false)}>
@@ -314,7 +314,7 @@ export default function SelectProduct() {
               <img src={ilustration} alt="Ilustration" />
             </div>
           </div>
-          <div className="content-description-order" style={{ height: 772 }}>
+          <div className="content-description-order" style={{ height: 868 }}>
             <Header />
             <div className="content-info-order">
               <h1>Informações para o Pedido</h1>

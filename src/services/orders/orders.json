@@ -7,12 +7,14 @@
       {
         "id": 1,
         "name": "Marcel Batista",
+        "date": "13/05/2019",
         "avatar": "https://svgshare.com/i/Khk.svg",
         "description": "cuscuz com calabresa, suco de laranja",
         "value": 3.5
       },
       {
         "id": 2,
+        "date": "13/05/2019",
         "name": "Fernanda Siqueira",
         "avatar": "https://svgshare.com/i/KiA.svg",
         "description": "cuscuz com calabresa, suco de laranja",
@@ -22,6 +24,7 @@
         "id": 3,
         "name": "Luiz Oliveira",
         "avatar": "https://svgshare.com/i/KiX.svg",
+        "date": "13/05/2019",
         "description": "2x bolo frito, café c/ leite.",
         "value": 4.5
       }
@@ -35,6 +38,7 @@
       {
         "id": 3,
         "name": "Ana Virlania",
+        "date": "13/05/2019",
         "avatar": "https://svgshare.com/i/Ki2.svg",
         "description": "2x sanduíche, vitamina de goiaba.",
         "value": 5.0
@@ -42,6 +46,7 @@
       {
         "id": 2,
         "name": "Marcel Batista",
+        "date": "13/05/2019",
         "avatar": "https://svgshare.com/i/Khk.svg",
         "description": "cuscuz com calabresa, suco de maracujá",
         "value": 3.5

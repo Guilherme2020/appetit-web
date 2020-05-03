@@ -99,7 +99,7 @@ export default function StatusPayment() {
                 color: "rgba(0,0,0, 0.88)",
               }}
             >
-              Para quem você está vendendo?
+              Qual o status de pagamento?
             </p>
           </div>
         </div>

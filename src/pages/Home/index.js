@@ -21,19 +21,10 @@ export default function Home() {
       console.log(e);
     }
   };
-  // let sales = [];
-  // if (orders.length > 0) {
-  //   for (let i = 0; i < orders.length; i++) {
-  //     sales = orders[i].sale;
-  //   }
-  //   console.log(sales);
-  //   setSales(sales);
-  // }
+
   useEffect(() => {
     onFetchData();
   }, []);
-
-  const salesData = () => {};
 
   const renderOrders = () => {
     return orders.map((item) => <Orders key={item.id} item={item} />);
@@ -43,8 +34,6 @@ export default function Home() {
     setSearch(text);
 
     let _orders = orders;
-
-    //orders [{ id, vale, ]]
 
     console.log(sales);
     const newData = orders.filter((item) => {

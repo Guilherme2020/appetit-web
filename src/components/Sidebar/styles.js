@@ -113,7 +113,7 @@ export const Content = styled.section`
     width: 196px;
     height: 18px;
     left: 73px;
-    top: 710px;
+    top: 828px;
 
     /* Caption */
 

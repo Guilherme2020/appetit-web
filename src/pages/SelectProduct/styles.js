@@ -190,7 +190,7 @@ export const Container = styled.div`
     color: rgba(0, 0, 0, 0.56);
   }
   .text-step {
-    font-family: Open Sans;
+    font-family: "Open Sans";
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -206,7 +206,7 @@ export const Container = styled.div`
     align-items: center;
     background: #fafafa;
     height: 68px;
-    margin-top: 5%;
+    margin-top: 22%;
 
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   }
@@ -259,12 +259,12 @@ export const Container = styled.div`
   }
   .cart-content {
     background: #ff8822;
-    margin-top: 54%;
+    margin-top: 60%;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 36%;
+    width: 37%;
     position: absolute;
     p {
       /* h6 */

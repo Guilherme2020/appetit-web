@@ -7,7 +7,28 @@ export const Container = styled.div`
   display: flex;
   height: auto;
   flex-direction: column;
+  .container-header {
+    display: flex;
+    width: 100%;
+    height: 41px;
 
+    div {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      height: 45px;
+      padding-right: 3%;
+      padding-top: 2%;
+    }
+  }
+  .section-content {
+    width: 100%;
+    padding-left: 0%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .orders {
     width: 68%;
     display: flex;
@@ -15,6 +36,16 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     padding-left: 25%;
+  }
+  .content-divisor {
+    width: 72%;
+  }
+  .divisor {
+    background: #ff8822;
+    width: 35%;
+    display: flex;
+    height: 2px;
+    margin-left: 20%;
   }
   .content-user {
     display: flex;
@@ -25,11 +56,10 @@ export const Container = styled.div`
     justify-content: center;
     padding-left: 4%;
     margin-top: 4%;
-    hr {
-      background: #ff8822;
-      width: 154px;
-      height: 2px;
-      margin-left: 2px;
+    a {
+      width: 100%;
+      display: flex;
+      padding-right: 1%;
     }
     p {
       text-align: left;
@@ -116,12 +146,34 @@ export const Container = styled.div`
   }
 
   @media only screen and (min-width: 320px) and (max-width: 620px) {
+    .container-header {
+      height: 0;
+
+      div {
+        padding-right: 4%;
+        padding-top: 15%;
+      }
+    }
+    .section-content {
+      margin-top: 13%;
+    }
     .orders {
       width: 79%;
       padding-left: 0;
     }
+    .content-divisor {
+      width: 83%;
+    }
+    .divisor {
+      margin-left: 2px;
+      width: 100%;
+    }
     .content-user {
       width: 84%;
+
+      p {
+        line-height: 26px;
+      }
     }
     .card {
       justify-content: space-between;
