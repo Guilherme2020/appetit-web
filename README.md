@@ -2,7 +2,7 @@
     <img src="https://miro.medium.com/max/1200/1*y6C4nSvy2Woe0m7bWEn4BA.png" alt="Reactjs" width="700">
 
 </h1>
-<p align="center"> Appetit is a web application(SPA) that was created with ReactJs. This Application aims to simulate a virtual cafeteria where it would be held,
+<p align="center"> Appetit is a web application(SPA) that was created with ReactJs. This Application aims to simulate a virtual coffe shot where it would be held,
 Login, viewing the order list, order details, choosing a product for one or more customers and selecting order details such as payment status and date the order was placed. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).</p>
 
 <p align="center">
