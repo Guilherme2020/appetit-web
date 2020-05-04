@@ -46,6 +46,7 @@ Login, viewing the order list, order details, choosing a product for one or more
   - Use lib React Icons.
   - Use lib react-router-dom transition between pages.
   - Use of componentization techniques to facilitate code reuse.
+  - Use lib rc-progress for show progress bar.
   - Use of data fakes to simulate communication with an api.
   - Use of Css FlexBox and use media querys for metrics in mobile screen.
 
