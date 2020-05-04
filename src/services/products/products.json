@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Cuzcuz Simples",
+    "price": 2.25,
+    "imgIten": "https://svgshare.com/i/KnJ.svg",
+    "options": [
+      {
+        "id": 1,
+        "name": "milho"
+      },
+      {
+        "id": 2,
+        "name": "arroz"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Cuzcuz Completo",
+    "price": 2.25,
+    "imgIten": "https://svgshare.com/i/KmS.svg",
+    "options": [
+      {
+        "id": 1,
+        "name": "milho"
+      },
+      {
+        "id": 2,
+        "name": "arroz"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Pão caseiro",
+    "price": 2.25,
+    "imgIten": "https://svgshare.com/i/Kka.svg",
+    "options": [
+      {
+        "id": 1,
+        "name": "milho"
+      },
+      {
+        "id": 2,
+        "name": "arroz"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Pão caseiro completo",
+    "price": 2.25,
+    "imgIten": "https://svgshare.com/i/Kne.svg",
+    "options": [
+      {
+        "id": 1,
+        "name": "milho"
+      },
+      {
+        "id": 2,
+        "name": "arroz"
+      }
+    ]
+  }
+]

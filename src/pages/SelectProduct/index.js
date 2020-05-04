@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Aside from "../../components/Sidebar";
 import Itens from "../../components/Itens";
 import Header from "../../components/Header";
@@ -11,82 +11,13 @@ import { AiOutlineSearch } from "react-icons/ai";
 import back from "../../assets/back.png";
 import arrow from "../../assets/arrow-right.svg";
 import ilustration from "../../assets/Illustration.png";
-import cuscuzSimples from "../../assets/cuscuzsimples.svg";
-import cuscuzCompleto from "../../assets/cuscuzcompleto.svg";
-import paocaseiro from "../../assets/paocaseiro.svg";
-import paocaseiroCompleto from "../../assets/paocaseirocompleto.svg";
 import FormatNumber from "../../utils/FormatNumber";
-
-const productsList = [
-  {
-    id: 1,
-    name: "Cuzcuz Simples",
-    price: 2.25,
-    imgIten: cuscuzSimples,
-    options: [
-      {
-        id: 1,
-        name: "milho",
-      },
-      {
-        id: 2,
-        name: "arroz",
-      },
-    ],
-  },
-  {
-    id: 2,
-    name: "Cuzcuz Completo",
-    price: 2.25,
-    imgIten: cuscuzCompleto,
-    options: [
-      {
-        id: 1,
-        name: "milho",
-      },
-      {
-        id: 2,
-        name: "arroz",
-      },
-    ],
-  },
-  {
-    id: 3,
-    name: "Pão caseiro",
-    price: 2.25,
-    imgIten: paocaseiro,
-    options: [
-      {
-        id: 1,
-        name: "milho",
-      },
-      {
-        id: 2,
-        name: "arroz",
-      },
-    ],
-  },
-  {
-    id: 4,
-    name: "Pão caseiro completo",
-    price: 2.25,
-    imgIten: paocaseiroCompleto,
-    options: [
-      {
-        id: 1,
-        name: "milho",
-      },
-      {
-        id: 2,
-        name: "arroz",
-      },
-    ],
-  },
-];
+import AmountCart from "../../utils/AmountCart";
+import api from "../../services/products/api";
 
 export default function SelectProduct() {
   const [search, setSearch] = useState("");
-  const [products, setProducts] = useState(productsList);
+  const [products, setProducts] = useState([]);
   const [increment, setIncrement] = useState(1);
   const [showDetail, setShowDetail] = useState(false);
   const [itemDetail, setItemDetail] = useState({});
@@ -94,6 +25,17 @@ export default function SelectProduct() {
   const [observation, setObservation] = useState("");
   const [cart, setCart] = useState([]);
 
+  useEffect(() => {
+    loadData();
+  }, []);
+  const loadData = async () => {
+    try {
+      let response = await api.fetchData();
+      setProducts(response);
+    } catch (e) {
+      console.log(e);
+    }
+  };
   const addCart = (item) => {
     // itemDetail.price, increment, itemDetail.name,itemDetail.img
     const formatIten = {
@@ -110,14 +52,6 @@ export default function SelectProduct() {
     setIncrement(1);
     setObservation("");
     setOption("");
-  };
-
-  const calcItensCart = (cart) => {
-    let total = 0;
-    cart.map((c) => {
-      total += c.qnt * c.price;
-    });
-    return FormatNumber(total);
   };
 
   const renderDetail = (item) => {
@@ -147,7 +81,7 @@ export default function SelectProduct() {
     if (cart.length > 0) {
       return (
         <div className="cart-content">
-          <p>Total: {calcItensCart(cart)}</p>
+          <p>Total: {AmountCart(cart)}</p>
 
           <Link onClick={() => saveCart()} to="select-clients">
             <div>
@@ -178,7 +112,8 @@ export default function SelectProduct() {
     });
     setProducts(newData);
     if (text.length === 0) {
-      setProducts(productsList);
+      loadData();
+      // setProducts(productsList);
     }
   };
   return (
@@ -249,8 +184,8 @@ export default function SelectProduct() {
                   <div>
                     <input
                       type="radio"
-                      id="male"
-                      name="name"
+                      id="option"
+                      name="option"
                       onChange={(e) => setOption(e.target.value)}
                       value={option.name}
                     />
@@ -368,7 +303,6 @@ export default function SelectProduct() {
                   onChange={(e) => searchFilterFunction(e.target.value)}
                   value={search}
                   placeholder=" "
-                  style={{ width: "212%", background: "#FAFAFA" }}
                 />
 
                 <label>Procure o produto aqui...</label>

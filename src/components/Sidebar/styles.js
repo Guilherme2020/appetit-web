@@ -34,6 +34,11 @@ export const Content = styled.section`
     height: 56px;
     display: flex;
     margin-top: 15%;
+    > div {
+      display: flex;
+      width: 22%;
+      justify-content: center;
+    }
     p {
       position: absolute;
       width: 108px;
@@ -47,7 +52,8 @@ export const Content = styled.section`
       font-style: normal;
       font-weight: 600;
       font-size: 14px;
-      line-height: 22px;
+      line-height: 28px;
+
       /* identical to box height, or 157% */
 
       text-transform: uppercase;
@@ -67,7 +73,7 @@ export const Content = styled.section`
     > p {
       /* Button */
 
-      font-family: Open Sans;
+      font-family: "Open Sans";
       font-style: normal;
       font-weight: 600;
       font-size: 14px;
@@ -80,7 +86,9 @@ export const Content = styled.section`
     }
   }
   .orders-closed {
-    font-family: Open Sans;
+    font-family: "Open Sans";
+    padding-left: 4%;
+
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -92,13 +100,25 @@ export const Content = styled.section`
     color: rgba(255, 255, 255, 0.54);
   }
   .content-clients {
-    padding-left: 12%;
+    padding-left: 15%;
+
+    > div {
+      display: flex;
+      width: 14%;
+
+      justify-content: center;
+      img {
+        opacity: 0.5;
+        margin-right: 29%;
+      }
+    }
     p {
       font-family: "Open Sans";
       font-style: normal;
       font-weight: 600;
       font-size: 14px;
       line-height: 22px;
+      opacity: 0.5;
       /* identical to box height, or 157% */
 
       text-transform: uppercase;

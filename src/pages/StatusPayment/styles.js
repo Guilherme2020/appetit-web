@@ -231,7 +231,7 @@ export const Container = styled.div`
     height: 8px;
     background: rgba(0, 0, 0, 0.08);
   }
-  .content-observation {
+  .content-date {
     width: 90%;
     margin-top: 1%;
 
@@ -309,6 +309,16 @@ export const Container = styled.div`
     justify-content: space-between;
     padding: 26px;
   }
+  /* .content-options div label {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    width: 49%;
+
+    color: rgba(0, 0, 0, 0.56);
+  } */
   .content-options {
     width: 84%;
     padding: 15px;
@@ -321,12 +331,19 @@ export const Container = styled.div`
     div {
       display: flex;
       justify-content: space-between;
-      width: 29%;
+      width: 35%;
 
       align-items: center;
 
       label {
         font-family: "Open Sans";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        width: 77%;
+
+        color: rgba(0, 0, 0, 0.56);
       }
     }
   }
@@ -386,6 +403,47 @@ export const Container = styled.div`
       margin-right: 3%;
     }
   }
+  .calendar-content {
+    position: absolute;
+    top: 22px;
+    left: 92%;
+  }
+  .container-calendar {
+    position: absolute;
+    top: 38%;
+    right: 9%;
+  }
+  .container-btn-save {
+    width: 91%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10%;
+  }
+  .btn-save {
+    width: 208px;
+    height: 48px;
+    opacity: ${(props) => props.opacity};
+    /* Primary */
+
+    background: #ff8822;
+    border-radius: 100px;
+    border: 2px solid #ff8822;
+    /* Button */
+
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+
+    text-align: center;
+    text-transform: uppercase;
+
+    /* White */
+
+    color: #ffffff;
+  }
   .label-float {
     position: relative;
     padding-top: 13px;
@@ -441,15 +499,13 @@ export const Container = styled.div`
     color: #ff8822;
   }
   .pure-material-textfield-outlined {
-    --pure-material-safari-helper1: rgb(
-      var(--pure-material-primary-rgb, 33, 150, 243)
-    );
+    --pure-material-safari-helper1: rgba(0, 0, 0, 0.56);
     position: relative;
     display: inline-block;
     padding-top: 6px;
     font-family: var(
       --pure-material-font,
-      "Roboto",
+      "Open Sans",
       "Segoe UI",
       BlinkMacSystemFont,
       system-ui,
@@ -466,7 +522,7 @@ export const Container = styled.div`
     box-sizing: border-box;
     margin: 0;
     border: solid 1px; /* Safari */
-    border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+    border-color: rgba(var(0, 0, 0, 0.56));
     border-top-color: transparent;
     border-radius: 4px;
     padding: 15px 13px 15px;
@@ -489,7 +545,7 @@ export const Container = styled.div`
     top: 0;
     left: 0;
     display: flex;
-    border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+    border-color: rgba(var(0, 0, 0, 0.56));
     width: 100%;
     max-height: 100%;
     color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
@@ -509,7 +565,7 @@ export const Container = styled.div`
     box-sizing: border-box;
     margin-top: 6px;
     border-top: solid 1px;
-    border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+    border-top-color: rgba(var(0, 0, 0, 0.56));
     min-width: 10px;
     height: 8px;
     pointer-events: none;
@@ -535,7 +591,7 @@ export const Container = styled.div`
   /* Hover */
   .pure-material-textfield-outlined:hover > input,
   .pure-material-textfield-outlined:hover > textarea {
-    border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
+    border-color: rgba(var(0, 0, 0, 0.56));
     border-top-color: transparent;
   }
 
@@ -543,19 +599,19 @@ export const Container = styled.div`
   .pure-material-textfield-outlined:hover > textarea + span::before,
   .pure-material-textfield-outlined:hover > input + span::after,
   .pure-material-textfield-outlined:hover > textarea + span::after {
-    border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
+    border-top-color: rgba(var(0, 0, 0, 0.56));
   }
 
   .pure-material-textfield-outlined:hover > input:not(:focus):placeholder-shown,
   .pure-material-textfield-outlined:hover
     > textarea:not(:focus):placeholder-shown {
-    border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
+    border-color: rgba(var(0, 0, 0, 0.56));
   }
 
   /* Placeholder-shown */
   .pure-material-textfield-outlined > input:not(:focus):placeholder-shown,
   .pure-material-textfield-outlined > textarea:not(:focus):placeholder-shown {
-    border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+    border-top-color: rgba(0, 0, 0, 0.56);
   }
 
   .pure-material-textfield-outlined
@@ -586,7 +642,7 @@ export const Container = styled.div`
   /* Focus */
   .pure-material-textfield-outlined > input:focus,
   .pure-material-textfield-outlined > textarea:focus {
-    border-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+    border-color: rgba(0, 0, 0, 0.56);
     border-top-color: transparent;
     box-shadow: inset 1px 0 var(--pure-material-safari-helper1),
       inset -1px 0 var(--pure-material-safari-helper1),
@@ -596,7 +652,7 @@ export const Container = styled.div`
 
   .pure-material-textfield-outlined > input:focus + span,
   .pure-material-textfield-outlined > textarea:focus + span {
-    color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+    color: rgba(0, 0, 0, 0.56);
   }
 
   .pure-material-textfield-outlined > input:focus + span::before,
@@ -673,4 +729,56 @@ export const Container = styled.div`
       }
     }
   }
+
+  @media only screen and (min-width: 320px) and (max-width: 620px) {
+    .content-new-order {
+      display: none;
+    }
+    .content-options {
+      width: 84%;
+      div {
+        width: 48%;
+      }
+    }
+
+    .content-options div label {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      width: 78%;
+      color: rgba(0, 0, 0, 0.56);
+    }
+    .container-calendar {
+      top: 35%;
+      right: 1%;
+    }
+  }
+`;
+
+export const Button = styled.button`
+  width: 208px;
+  height: 48px;
+  opacity: ${(props) => props.opacity};
+  /* Primary */
+
+  background: #ff8822;
+  border-radius: 100px;
+  border: 2px solid #ff8822;
+  /* Button */
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  /* identical to box height, or 157% */
+
+  text-align: center;
+  text-transform: uppercase;
+
+  /* White */
+
+  color: #ffffff;
 `;

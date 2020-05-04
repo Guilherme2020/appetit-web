@@ -4,7 +4,9 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  height: auto;
+  background: #fafafa;
+  width: 100%;
   .content {
     display: flex;
     flex-direction: column;
@@ -37,6 +39,14 @@ export const Container = styled.div`
 
       top: calc(50% - 48px / 2 - 88px);
       color: rgba(0, 0, 0, 0.54);
+    }
+  }
+  @media only screen and (min-width: 320px) and (max-width: 620px) {
+    .content {
+      margin-top: 9%;
+    }
+    .text-description {
+      width: 82%;
     }
   }
 `;

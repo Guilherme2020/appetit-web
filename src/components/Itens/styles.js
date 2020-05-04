@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 88%;
-  margin-top: 3%;
+  margin-top: 5%;
   .content-itens {
     display: flex;
     width: 100%;
@@ -48,5 +48,10 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  @media only screen and (min-width: 320px) and (max-width: 620px) {
+    .content-itens .iten-name {
+      width: 60%;
+    }
   }
 `;

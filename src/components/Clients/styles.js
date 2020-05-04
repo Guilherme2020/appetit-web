@@ -16,6 +16,9 @@ export const Container = styled.div`
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    div {
+      display: flex;
+    }
   }
   .content-itens .iten-name {
     font-family: "Open Sans";
@@ -49,5 +52,10 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  @media only screen and (min-width: 320px) and (max-width: 620px) {
+    .content-itens .iten-name {
+      width: 81%;
+    }
   }
 `;

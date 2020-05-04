@@ -2,7 +2,8 @@ import React from "react";
 
 import { Aside, Content } from "./styles";
 import logo from "../../assets/logo-white.svg";
-import iconOrder from "../../assets/icon-order.svg";
+import iconOrder from "../../assets/list.svg";
+import avatar from "../../assets/avatar-user-side.svg";
 export default function Sidebar() {
   return (
     <>
@@ -13,17 +14,21 @@ export default function Sidebar() {
           </div>
 
           <div className={"orders-aside"}>
-            <img alt="icon" src={iconOrder} />
-            <p>pedidos</p>
+            <div>
+              <img alt="icon" src={iconOrder} />
+              <p>pedidos</p>
+            </div>
           </div>
           <div className={"orders-open"}>
             <p>| Em abertos</p>
-            <p className={"orders-closed"}>| Encerrados</p>
+            <p className={"orders-closed"}>Encerrados</p>
           </div>
           <div></div>
           <div className={"content-clients"}>
-            <img alt="icon" src={iconOrder} />
-            <p>Clientes</p>
+            <div>
+              <img alt="icon" src={avatar} />
+              <p>Clientes</p>
+            </div>
           </div>
           <footer className={"footer-sidebar"}>
             Infoway Gestão em Saúde ©, 2019.

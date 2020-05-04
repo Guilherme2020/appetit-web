@@ -54,6 +54,7 @@ export default function SelectClients() {
   useEffect(() => {
     loadProducts();
   }, []);
+
   const loadProducts = () => {
     const productsStore = localStorage.getItem("cart");
     const productsParse = JSON.parse(productsStore);
@@ -138,29 +139,27 @@ export default function SelectClients() {
           <div className="content-title-product">
             <h1>Produtos</h1>
             {productsChoise.map((i) => (
-              <>
-                <div key={i.id}>
-                  <div className="content-product-choise">
-                    <img src={i.img} alt="avatar" />
-                    <p className="product-choise-name">{i.name}</p>
-                    <p className="product-choise-price">
-                      {FormatNumber(i.price)}
-                    </p>
-                  </div>
-
-                  <p className="product-choise-observation">{i.observation}</p>
+              <div key={i.id}>
+                <div className="content-product-choise">
+                  <img src={i.img} alt="avatar" />
+                  <p className="product-choise-name">{i.name}</p>
+                  <p className="product-choise-price">
+                    {FormatNumber(i.price)}
+                  </p>
                 </div>
-              </>
+
+                <p className="product-choise-observation">{i.observation}</p>
+              </div>
             ))}
           </div>
           <div className="line-separator" />
           <div className="amount-products">
-            <p className>Total</p>
+            <p>Total</p>
 
             <p className="amount">{CalcItensCart(productsChoise)}</p>
           </div>
         </div>
-        <div className="content-description-order" style={{ height: 768 }}>
+        <div className="content-description-order" style={{ height: 868 }}>
           <Header />
           <div className="content-info-order">
             <h1>Informações para o Pedido</h1>
@@ -212,7 +211,6 @@ export default function SelectClients() {
                 placeholder=" "
                 onChange={(e) => searchFilterFunction(e.target.value)}
                 value={search}
-                style={{ width: "212%", background: "#FAFAFA" }}
               />
 
               <label>Procure o Cliente aqui...</label>

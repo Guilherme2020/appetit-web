@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Aside from "../../components/Sidebar";
 import Orders from "../../components/Orders";
-import Header from "../../components/Header";
 import api from "../../services/orders/api";
 import { Link } from "react-router-dom";
 import more from "../../assets/more.svg";
@@ -11,7 +10,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 
 export default function Home() {
   const [search, setSearch] = useState("");
-  const [sales, setSales] = useState([]);
+  const [sales] = useState([]);
   const [orders, setOrders] = useState([]);
   const onFetchData = async () => {
     try {

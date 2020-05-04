@@ -341,7 +341,7 @@ export const Container = styled.div`
   }
   .clients-content {
     background: #ff8822;
-    margin-top: 54%;
+    margin-top: 60%;
 
     display: flex;
     align-items: center;
@@ -392,6 +392,8 @@ export const Container = styled.div`
     -moz-transition: all 0.3s ease-out;
     -webkit-appearance: none;
     border-radius: 0;
+    width: 212%;
+    background: #fafafa;
   }
 
   .label-float input:focus {
@@ -428,5 +430,25 @@ export const Container = styled.div`
     font-size: 13px;
     margin-top: 0;
     color: #ff8822;
+  }
+  @media only screen and (min-width: 320px) and (max-width: 620px) {
+    .content-new-order {
+      display: none;
+    }
+    .label-float input {
+      width: 148%;
+      background: #fafafa;
+    }
+    .clients-content {
+      position: inherit;
+      margin-top: 29%;
+
+      width: 100%;
+
+      a {
+        width: 18%;
+        margin-right: 9%;
+      }
+    }
   }
 `;

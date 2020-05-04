@@ -232,6 +232,22 @@ export const Container = styled.div`
       width: 17%;
       align-items: center;
     }
+
+    div label {
+      /* Body */
+      /* width: 49%; */
+
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      /* identical to box height, or 150% */
+
+      /* Black 0.56% */
+
+      color: rgba(0, 0, 0, 0.56);
+    }
   }
   .add-cart {
     padding: 22px;
@@ -306,6 +322,8 @@ export const Container = styled.div`
     -moz-transition: all 0.3s ease-out;
     -webkit-appearance: none;
     border-radius: 0;
+    width: 212%;
+    background: #fafafa;
   }
 
   .label-float input:focus {
@@ -344,15 +362,13 @@ export const Container = styled.div`
     color: #ff8822;
   }
   .pure-material-textfield-outlined {
-    --pure-material-safari-helper1: rgb(
-      var(--pure-material-primary-rgb, 33, 150, 243)
-    );
+    --pure-material-safari-helper1: rgba(0, 0, 0, 0.56);
     position: relative;
     display: inline-block;
     padding-top: 6px;
     font-family: var(
       --pure-material-font,
-      "Roboto",
+      "Open Sans",
       "Segoe UI",
       BlinkMacSystemFont,
       system-ui,
@@ -369,7 +385,7 @@ export const Container = styled.div`
     box-sizing: border-box;
     margin: 0;
     border: solid 1px; /* Safari */
-    border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+    border-color: rgba(var(0, 0, 0, 0.56));
     border-top-color: transparent;
     border-radius: 4px;
     padding: 15px 13px 15px;
@@ -392,7 +408,7 @@ export const Container = styled.div`
     top: 0;
     left: 0;
     display: flex;
-    border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+    border-color: rgba(var(0, 0, 0, 0.56));
     width: 100%;
     max-height: 100%;
     color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
@@ -412,7 +428,7 @@ export const Container = styled.div`
     box-sizing: border-box;
     margin-top: 6px;
     border-top: solid 1px;
-    border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+    border-top-color: rgba(var(0, 0, 0, 0.56));
     min-width: 10px;
     height: 8px;
     pointer-events: none;
@@ -438,7 +454,7 @@ export const Container = styled.div`
   /* Hover */
   .pure-material-textfield-outlined:hover > input,
   .pure-material-textfield-outlined:hover > textarea {
-    border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
+    border-color: rgba(var(0, 0, 0, 0.56));
     border-top-color: transparent;
   }
 
@@ -446,19 +462,19 @@ export const Container = styled.div`
   .pure-material-textfield-outlined:hover > textarea + span::before,
   .pure-material-textfield-outlined:hover > input + span::after,
   .pure-material-textfield-outlined:hover > textarea + span::after {
-    border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
+    border-top-color: rgba(var(0, 0, 0, 0.56));
   }
 
   .pure-material-textfield-outlined:hover > input:not(:focus):placeholder-shown,
   .pure-material-textfield-outlined:hover
     > textarea:not(:focus):placeholder-shown {
-    border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
+    border-color: rgba(var(0, 0, 0, 0.56));
   }
 
   /* Placeholder-shown */
   .pure-material-textfield-outlined > input:not(:focus):placeholder-shown,
   .pure-material-textfield-outlined > textarea:not(:focus):placeholder-shown {
-    border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+    border-top-color: rgba(0, 0, 0, 0.56);
   }
 
   .pure-material-textfield-outlined
@@ -489,7 +505,7 @@ export const Container = styled.div`
   /* Focus */
   .pure-material-textfield-outlined > input:focus,
   .pure-material-textfield-outlined > textarea:focus {
-    border-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+    border-color: rgba(0, 0, 0, 0.56);
     border-top-color: transparent;
     box-shadow: inset 1px 0 var(--pure-material-safari-helper1),
       inset -1px 0 var(--pure-material-safari-helper1),
@@ -499,7 +515,7 @@ export const Container = styled.div`
 
   .pure-material-textfield-outlined > input:focus + span,
   .pure-material-textfield-outlined > textarea:focus + span {
-    color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+    color: rgba(0, 0, 0, 0.56);
   }
 
   .pure-material-textfield-outlined > input:focus + span::before,
@@ -574,6 +590,56 @@ export const Container = styled.div`
       .pure-material-textfield-outlined > textarea + span::after {
         transition-duration: 0.1s;
       }
+    }
+  }
+  @media only screen and (min-width: 320px) and (max-width: 620px) {
+    .content-new-order {
+      display: none;
+    }
+    .label-float input {
+      width: 148%;
+    }
+    .text-info {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      color: rgba(0, 0, 0, 0.56);
+    }
+    .container-iten .content-details-iten {
+      margin-left: 4%;
+    }
+    .content-text-description {
+      margin-top: 5%;
+    }
+    .content-options div {
+      width: 20%;
+    }
+    .content-options div label {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      width: 49%;
+
+      color: rgba(0, 0, 0, 0.56);
+    }
+    .content-itens-choise {
+      margin-top: 24%;
+    }
+    .cart-content {
+      position: inherit;
+      margin-top: 42%;
+
+      width: 100%;
+    }
+    .cart-content p {
+      padding-left: 9px;
+    }
+    .cart-content a {
+      margin-right: 6%;
     }
   }
 `;

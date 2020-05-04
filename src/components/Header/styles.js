@@ -13,4 +13,7 @@ export const Container = styled.div`
     padding-right: 6%;
     padding-top: 5%;
   }
+  @media only screen and (min-width: 320px) and (max-width: 620px) {
+    display: none;
+  }
 `;
