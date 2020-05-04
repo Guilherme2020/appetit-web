@@ -51,7 +51,7 @@ Login, viewing the order list, order details, choosing a product for one or more
 
 ## Project architecture
 
-The project is divided into parts such as
+The project is divided into src in some directories like:
 
 - assets: image files that run locally in the project.
 - pages: Pages of the web application, where it contains a root file and a style file.
