@@ -60,6 +60,9 @@ The project is divided into parts such as
 - utils: Utility functions such as formatting values ​​in reais, formatting the total value of the customer's purchase through their cart.
 - services: place where a mock is made of an api through data trafficked in json, in this way the interface can make the call in these functions and obtain fakes data, simulating the communication with a real api.
 
+Considering the image quality of svg image files, the free external service https://svgur.com/
+this way the file is uploaded and the application requests the images via online url.
+
 ## Getting started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
