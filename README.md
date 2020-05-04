@@ -61,7 +61,7 @@ The project is divided into parts such as
 - services: place where a mock is made of an api through data trafficked in json, in this way the interface can make the call in these functions and obtain fakes data, simulating the communication with a real api.
 
 Considering the image quality of svg image files, the free external service https://svgur.com/
-this way the file is uploaded and the application requests the images via online url.
+this way the file is uploaded and the application requests the images via online url. As the service is free at some point, there is a noticeable slowness in loading the images hosted on it.
 
 ## Getting started
 
