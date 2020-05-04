@@ -31,21 +31,21 @@ export default function Home() {
 
   const searchFilterFunction = (text) => {
     setSearch(text);
+    console.log(text);
+    // let _orders = orders;
 
-    let _orders = orders;
+    // console.log(sales);
+    // const newData = orders.filter((item) => {
+    //   const itemData = `${item.dateSale.toUpperCase()} ${item.dateSale.toUpperCase()} ${item.dateSale.toUpperCase()}`;
+    //   const textData = text.toUpperCase();
 
-    console.log(sales);
-    const newData = orders.filter((item) => {
-      const itemData = `${item.dateSale.toUpperCase()} ${item.dateSale.toUpperCase()} ${item.dateSale.toUpperCase()}`;
-      const textData = text.toUpperCase();
-
-      return itemData.indexOf(textData) > -1;
-    });
-    console.log(newData);
-    setOrders(newData);
-    if (text.length === 0) {
-      setOrders(_orders);
-    }
+    //   return itemData.indexOf(textData) > -1;
+    // });
+    // console.log(newData);
+    // setOrders(newData);
+    // if (text.length === 0) {
+    //   setOrders(_orders);
+    // }
   };
 
   return (
