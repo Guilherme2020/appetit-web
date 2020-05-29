@@ -19,7 +19,7 @@ Login, viewing the order list, order details, choosing a product for one or more
 <br>
 <p align="center">
   <a href="https://opensource.org/licenses/MIT">
-    <img src="screenshots/neworder.png" alt="License MIT">
+    <img src="screenshots/new-order.png" alt="License MIT">
   </a>
 </p>
 
