@@ -54,7 +54,7 @@ export default function Form({ props }) {
             ENTRAR
           </Button>
         </section>
-        <footer className="footer">Infoway Gestão em Saúde ©, 2019.</footer>
+        <footer className="footer"></footer>
       </Container>
     </>
   );

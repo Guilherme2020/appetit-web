@@ -10,7 +10,6 @@ import { AiOutlineSearch } from "react-icons/ai";
 
 export default function Home() {
   const [search, setSearch] = useState("");
-  const [sales] = useState([]);
   const [orders, setOrders] = useState([]);
   const onFetchData = async () => {
     try {
@@ -60,7 +59,7 @@ export default function Home() {
         </div>
         <section>
           <div className="content-user">
-            <p>Olá, Vanusa!</p>
+            <p>Olá, Guilherme!</p>
           </div>
           <div className="divisor" />
           <div className="make-order">

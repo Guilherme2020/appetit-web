@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Aside = styled.aside`
   position: absolute;
   width: 342px;
-  height: 129%;
+  height: 134%;
 
   left: 0px;
   top: 0px;

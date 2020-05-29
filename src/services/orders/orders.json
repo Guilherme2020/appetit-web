@@ -6,24 +6,24 @@
     "sale": [
       {
         "id": 1,
-        "name": "Marcel Batista",
+        "name": "Justine Marshall",
+        "avatar": "https://svgshare.com/i/Kkn.svg",
         "date": "13/05/2019",
-        "avatar": "https://svgshare.com/i/Khk.svg",
         "description": "cuscuz com calabresa, suco de laranja",
         "value": 3.5
       },
       {
         "id": 2,
         "date": "13/05/2019",
-        "name": "Fernanda Siqueira",
-        "avatar": "https://svgshare.com/i/KiA.svg",
+        "name": "Bairam Frootan",
+        "avatar": "https://svgshare.com/i/Kn8.svg",
         "description": "cuscuz com calabresa, suco de laranja",
         "value": 7.9
       },
       {
         "id": 3,
-        "name": "Luiz Oliveira",
-        "avatar": "https://svgshare.com/i/KiX.svg",
+        "name": "Tua Manuera",
+        "avatar": "https://svgshare.com/i/Knq.svg",
         "date": "13/05/2019",
         "description": "2x bolo frito, café c/ leite.",
         "value": 4.5
@@ -37,17 +37,17 @@
     "sale": [
       {
         "id": 3,
-        "name": "Ana Virlania",
+        "name": "Justine Marshall",
+        "avatar": "https://svgshare.com/i/Km8.svg",
         "date": "13/05/2019",
-        "avatar": "https://svgshare.com/i/Ki2.svg",
         "description": "2x sanduíche, vitamina de goiaba.",
         "value": 5.0
       },
       {
         "id": 2,
-        "name": "Marcel Batista",
+        "name": "Bairam Frootan",
+        "avatar": "https://svgshare.com/i/Kko.svg",
         "date": "13/05/2019",
-        "avatar": "https://svgshare.com/i/Khk.svg",
         "description": "cuscuz com calabresa, suco de maracujá",
         "value": 3.5
       }

@@ -31,7 +31,7 @@ export default function Sidebar() {
             </div>
           </div>
           <footer className={"footer-sidebar"}>
-            Infoway Gestão em Saúde ©, 2019.
+            {/* Infoway Gestão em Saúde ©, 2019. */}
           </footer>
         </Content>
       </Aside>
