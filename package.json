@@ -6,7 +6,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "moment": "2.18.1",
+    "moment": "2.29.2",
     "moment-timezone": "^0.5.13",
     "react": "^16.13.1",
     "react-calendar": "^3.0.1",
